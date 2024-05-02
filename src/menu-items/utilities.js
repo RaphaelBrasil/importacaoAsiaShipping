@@ -8,6 +8,8 @@ import {
   LoadingOutlined
 } from '@ant-design/icons';
 
+import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat';
+
 // icons
 const icons = {
   FontSizeOutlined,
@@ -15,16 +17,32 @@ const icons = {
   BarcodeOutlined,
   AntDesignOutlined,
   LoadingOutlined,
-  AppstoreAddOutlined
+  AppstoreAddOutlined,
+  DirectionsBoatIcon
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const utilities = {
   id: 'utilities',
-  title: 'Utilities',
+  title: 'Utilidades',
   type: 'group',
   children: [
+    {
+      id: 'util-stepper',
+      title: 'Acompanhamento',
+      type: 'item',
+      url: '/stepper',
+      icon: icons.DirectionsBoatIcon
+    },
+    {
+      id: 'util-color',
+      title: 'Color',
+      type: 'item',
+      url: '/color',
+      icon: icons.BgColorsOutlined
+    } /*
+    ,
     {
       id: 'util-typography',
       title: 'Typography',
@@ -33,27 +51,12 @@ const utilities = {
       icon: icons.FontSizeOutlined
     },
     {
-      id: 'util-color',
-      title: 'Color',
-      type: 'item',
-      url: '/color',
-      icon: icons.BgColorsOutlined
-    },
-    {
       id: 'util-shadow',
       title: 'Shadow',
       type: 'item',
       url: '/shadow',
       icon: icons.BarcodeOutlined
-    },
-    {
-      id: 'ant-icons',
-      title: 'Ant Icons',
-      type: 'item',
-      url: '/icons/ant',
-      icon: icons.AntDesignOutlined,
-      breadcrumbs: false
-    }
+    }*/
   ]
 };
 

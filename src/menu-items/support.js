@@ -11,7 +11,7 @@ const icons = {
 
 const support = {
   id: 'support',
-  title: 'Support',
+  title: 'Suporte',
   type: 'group',
   children: [
     {
@@ -20,7 +20,7 @@ const support = {
       type: 'item',
       url: '/sample-page',
       icon: icons.ChromeOutlined
-    },
+    } /*,
     {
       id: 'documentation',
       title: 'Documentation',
@@ -29,7 +29,7 @@ const support = {
       icon: icons.QuestionOutlined,
       external: true,
       target: true
-    }
+    }*/
   ]
 };
 

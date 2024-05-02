@@ -15,9 +15,9 @@ const AuthFooter = () => {
         textAlign={matchDownSM ? 'center' : 'inherit'}
       >
         <Typography variant="subtitle2" color="secondary" component="span">
-          &copy; Mantis React Dashboard Template By&nbsp;
-          <Typography component={Link} variant="subtitle2" href="https://codedthemes.com" target="_blank" underline="hover">
-            CodedThemes
+          &copy; Aplicação de acompanhamento de importação por&nbsp;
+          <Typography component={Link} variant="subtitle2" href="brothermotos.com.br" target="_blank" underline="hover">
+            Desenvolvimento Brother Motos
           </Typography>
         </Typography>
 
