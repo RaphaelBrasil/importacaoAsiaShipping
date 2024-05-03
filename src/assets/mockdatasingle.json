@@ -1,0 +1,29 @@
+{
+  "pedido": 1,
+  "embarque": {
+    "empresa": "ABC Shipping",
+    "agente_frete": "XYZ Logistics",
+    "export": "Brazil",
+    "armador": "Oceanic Lines",
+    "container": "CNT123",
+    "numero_bl": "BL456",
+    "bl_status": true,
+    "fatura": "INV789",
+    "chegada_porto": "2024-04-15"
+  },
+  "chegada": {
+    "documentacao": true,
+    "data_di": "2024-04-20",
+    "numero_di": 123456,
+    "ce_processo": 458796,
+    "status": "Green",
+    "glme": true,
+    "nf_status": true,
+    "cipp_averb": true,
+    "chegada_empresa": "2024-04-22",
+    "free_time": 5,
+    "transportadora": "ABC123",
+    "nf": 789,
+    "cte": 456
+  }
+}

@@ -1,0 +1,263 @@
+[
+  {
+    "pedido": 1,
+    "embarque": {
+      "empresa": "XYZ Shipping",
+      "agente_frete": "ABC Logistics",
+      "export": "USA",
+      "armador": "Pacific Lines",
+      "container": "CNT456",
+      "numero_bl": "BL789",
+      "bl_status": true,
+      "fatura": "INV123",
+      "chegada_porto": "2024-05-01"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-05",
+      "numero_di": 654321,
+      "ce_processo": 987654,
+      "status": "Green",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-07",
+      "free_time": 7,
+      "transportadora": "XYZ789",
+      "nf": 321,
+      "cte": 654
+    }
+  },
+  {
+    "pedido": 2,
+    "embarque": {
+      "empresa": "DEF Shipping",
+      "agente_frete": "LMN Logistics",
+      "export": "China",
+      "armador": "Atlantic Lines",
+      "container": "CNT789",
+      "numero_bl": "BL123",
+      "bl_status": true,
+      "fatura": "INV456",
+      "chegada_porto": "2024-05-02"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-06",
+      "numero_di": 789123,
+      "ce_processo": 456789,
+      "status": "Red",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-08",
+      "free_time": 7,
+      "transportadora": "DEF456",
+      "nf": 456,
+      "cte": 789
+    }
+  },
+  {
+    "pedido": 3,
+    "embarque": {
+      "empresa": "GHI Shipping",
+      "agente_frete": "OPQ Logistics",
+      "export": "Germany",
+      "armador": "Baltic Lines",
+      "container": "CNT321",
+      "numero_bl": "BL567",
+      "bl_status": true,
+      "fatura": "INV789",
+      "chegada_porto": "2024-05-03"
+    },
+    "chegada": {
+      "documentacao": false,
+      "data_di": "2024-05-07",
+      "numero_di": 321654,
+      "ce_processo": 987456,
+      "status": "Yellow",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-09",
+      "free_time": 7,
+      "transportadora": "GHI123",
+      "nf": 789,
+      "cte": 123
+    }
+  },
+  {
+    "pedido": 4,
+    "embarque": {
+      "empresa": "PQR Shipping",
+      "agente_frete": "STU Logistics",
+      "export": "Japan",
+      "armador": "Asian Lines",
+      "container": "CNT987",
+      "numero_bl": "BL321",
+      "bl_status": true,
+      "fatura": "INV654",
+      "chegada_porto": null
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-08",
+      "numero_di": 987321,
+      "ce_processo": 654987,
+      "status": "Green",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-10",
+      "free_time": 7,
+      "transportadora": "PQR789",
+      "nf": 654,
+      "cte": 987
+    }
+  },
+  {
+    "pedido": 5,
+    "embarque": {
+      "empresa": "MNO Shipping",
+      "agente_frete": "JKL Logistics",
+      "export": "Australia",
+      "armador": "Pacific Lines",
+      "container": "CNT654",
+      "numero_bl": "BL987",
+      "bl_status": true,
+      "fatura": "INV321",
+      "chegada_porto": "2024-05-05"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-09",
+      "numero_di": 654987,
+      "ce_processo": 321987,
+      "status": "Red",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-11",
+      "free_time": 7,
+      "transportadora": "MNO123",
+      "nf": 321,
+      "cte": 654
+    }
+  },
+  {
+    "pedido": 6,
+    "embarque": {
+      "empresa": "UVW Shipping",
+      "agente_frete": "XYZ Logistics",
+      "export": "Brazil",
+      "armador": "Atlantic Lines",
+      "container": "CNT789",
+      "numero_bl": "BL654",
+      "bl_status": true,
+      "fatura": "INV987",
+      "chegada_porto": "2024-05-06"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-10",
+      "numero_di": 987456,
+      "ce_processo": 654321,
+      "status": "Yellow",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-12",
+      "free_time": 7,
+      "transportadora": "UVW789",
+      "nf": 987,
+      "cte": 456
+    }
+  },
+  {
+    "pedido": 7,
+    "embarque": {
+      "empresa": "RST Shipping",
+      "agente_frete": "FGH Logistics",
+      "export": "India",
+      "armador": "Baltic Lines",
+      "container": "CNT147",
+      "numero_bl": "BL258",
+      "bl_status": true,
+      "fatura": "INV369",
+      "chegada_porto": "2024-05-07"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-11",
+      "numero_di": 741852,
+      "ce_processo": 369258,
+      "status": "Green",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-13",
+      "free_time": 7,
+      "transportadora": "RST456",
+      "nf": 369,
+      "cte": 258
+    }
+  },
+  {
+    "pedido": 8,
+    "embarque": {
+      "empresa": "NOP Shipping",
+      "agente_frete": "QRS Logistics",
+      "export": "Canada",
+      "armador": "Pacific Lines",
+      "container": "CNT369",
+      "numero_bl": "BL147",
+      "bl_status": true,
+      "fatura": "INV258",
+      "chegada_porto": "2024-05-08"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-12",
+      "numero_di": 369741,
+      "ce_processo": 258369,
+      "status": "Red",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-14",
+      "free_time": 7,
+      "transportadora": "NOP123",
+      "nf": 258,
+      "cte": 369
+    }
+  },
+  {
+    "pedido": 9,
+    "embarque": {
+      "empresa": "EFG Shipping",
+      "agente_frete": "HIJ Logistics",
+      "export": "France",
+      "armador": "Atlantic Lines",
+      "container": "CNT258",
+      "numero_bl": "BL369",
+      "bl_status": true,
+      "fatura": "INV147",
+      "chegada_porto": "2024-05-09"
+    },
+    "chegada": {
+      "documentacao": true,
+      "data_di": "2024-05-13",
+      "numero_di": 258369,
+      "ce_processo": 147258,
+      "status": "Green",
+      "glme": true,
+      "nf_status": true,
+      "cipp_averb": true,
+      "chegada_empresa": "2024-05-15",
+      "free_time": 7,
+      "transportadora": "EFG456",
+      "nf": 147,
+      "cte": 258
+    }
+  }
+]
