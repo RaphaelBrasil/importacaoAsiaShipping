@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography, Card, CardContent } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { PieChart } from '@mui/x-charts/PieChart';
@@ -62,10 +62,14 @@ const convertJsonToRowsAndColumns = (jsonArray) => {
 };
 
 // Convertendo o JSON para linhas e colunas
-const { columns, rows } = convertJsonToRowsAndColumns(dataMock);
 
 const DashboardDefault = () => {
-  // Função para contar o número de ocorrências de cada status
+  const [rowSelectionModel, setRowSelectionModel] = useState([]);
+  const [data] = useState(dataMock);
+  // eslint-disable-next-line no-unused-vars
+  const [selectedRows, setSelectedRows] = useState(dataMock);
+  const { columns, rows } = convertJsonToRowsAndColumns(data);
+
   const countStatus = (data) => {
     const statusCount = {
       Green: 0,
@@ -85,6 +89,11 @@ const DashboardDefault = () => {
     return [statusCount, documentacaoCount];
   };
 
+  const mostraSelecionados = (rowSelection) => {
+    const result = data.filter((item) => rowSelection.includes(item.pedido));
+    result.length > 0 ? setSelectedRows(result) : setSelectedRows(data);
+  };
+
   // Função para converter o objeto de contagem em um array de objetos
   const convertCountToArray = (countObj) => {
     return Object.keys(countObj).map((key) => ({
@@ -93,10 +102,18 @@ const DashboardDefault = () => {
     }));
   };
 
-  // Dados do gráfico
-  const [retornoStatus, retornoDocumentacao] = countStatus(dataMock);
-  const statusData = convertCountToArray(retornoStatus);
-  const documentoData = convertCountToArray(retornoDocumentacao);
+  const [retornoStatus, retornoDocumentacao] = countStatus(selectedRows);
+  const [statusData, setStatusData] = useState(convertCountToArray(retornoStatus));
+  const [documentoData, setSocumentoData] = useState(convertCountToArray(retornoDocumentacao));
+
+  // useEffect para atualizar os dados dos gráficos quando as linhas mudarem
+  useEffect(() => {
+    const [novoRetornoStatus, novoRetornoDocumentacao] = countStatus(selectedRows);
+    setStatusData(convertCountToArray(novoRetornoStatus));
+    setSocumentoData(convertCountToArray(novoRetornoDocumentacao));
+
+    // Lembre-se de incluir todas as dependências relevantes no array de dependências
+  }, [selectedRows]);
 
   const theme = useTheme();
 
@@ -190,6 +207,12 @@ const DashboardDefault = () => {
               }
             }}
             pageSizeOptions={[5, 10]}
+            onRowSelectionModelChange={(newRowSelectionModel) => {
+              setRowSelectionModel(newRowSelectionModel);
+              mostraSelecionados(newRowSelectionModel);
+              //console.log(newRowSelectionModel);
+            }}
+            rowSelectionModel={rowSelectionModel}
             checkboxSelection
           />
         </div>
