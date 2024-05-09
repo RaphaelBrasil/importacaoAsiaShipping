@@ -14,6 +14,10 @@ import VideoLabelIcon from '@mui/icons-material/VideoLabel';
 import { Card, Typography, CardContent } from '@mui/material';
 import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat';
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
+import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
+//import Grid from '@mui/material/Grid';
+
 import dataSingle from './../../assets/mockdatasingle.json';
 
 // Custom Step Icon
@@ -139,58 +143,66 @@ export default function CustomizedSteppers() {
 
   return (
     <div style={{ display: 'flex', gap: '20px', flexDirection: 'column', justifyContent: 'center' }}>
-      <Card>
-        <CardContent sx={{ backgroundColor: '#ffd666' }}>
-          <Typography variant="h2" gutterBottom>
-            <strong>Embarque</strong>
-          </Typography>
-          <Stack direction="column" spacing={4}>
-            <Stepper alternativeLabel activeStep={activeStepEmbarque} connector={<ColorlibConnector />}>
-              {stepsEmbarque.map((label, index) => (
-                <Step key={label}>
-                  <StepLabel StepIconComponent={ColorlibStepIcon} icon={index + 1}>
-                    {label}
-                  </StepLabel>
-                </Step>
-              ))}
-            </Stepper>
-            <Button variant="contained" color="primary" onClick={handleNextEmbarque}>
-              {activeStepEmbarque === stepsEmbarque.length - 1 ? 'Reset' : 'Next'}
-            </Button>
-          </Stack>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent sx={{ backgroundColor: '#ffd666' }}>
-          <Typography variant="h2" gutterBottom>
-            <strong>Embarque</strong>
-          </Typography>
-          <Typography variant="body1">
-            <strong>EMPRESA:</strong> {data.embarque.empresa}
-            <br />
-            <strong>AGENTE DE FRETE:</strong> {data.embarque.agente_frete}
-            <br />
-            <strong>EXPORT:</strong> {data.embarque.export}
-            <br />
-            <strong>ARMADOR:</strong> {data.embarque.armador}
-            <br />
-            <strong>CONTAINER:</strong> {data.embarque.container}
-            <br />
-            <strong>BL Nº:</strong> {data.embarque.numero_bl}
-            <br />
-            <strong>BL:</strong> {data.embarque.bl_status ? 'OK' : ''}
-            <br />
-            <strong>FATURA:</strong> {data.embarque.fatura}
-            <br />
-            <strong>CHEGADA PORTO:</strong> {converteData(data.embarque.chegada_porto)}
-            <br />
-          </Typography>
-        </CardContent>
-      </Card>
       <div style={{ display: 'flex', gap: '20px' }}>
-        <Card sx={{ flex: 1, backgroundColor: '#bae7ff' }}>
+        <Card sx={{ display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#bae7ff' }}>
           <CardContent>
-            <Typography variant="h2" gutterBottom>
+            <Tooltip title="Embarque">
+              <Typography sx={{ color: '#434343' }} variant="h2" gutterBottom>
+                Embarque
+              </Typography>
+            </Tooltip>
+            <Typography variant="body1">
+              <Divider flexItem />
+              <strong>AGENTE DE FRETE:</strong> {data.embarque.agente_frete}
+              <Divider flexItem />
+              <strong>EXPORT:</strong> {data.embarque.export}
+              <Divider flexItem />
+              <strong>ARMADOR:</strong> {data.embarque.armador}
+              <Divider flexItem />
+              <strong>CONTAINER:</strong> {data.embarque.container}
+              <Divider flexItem />
+              <strong>BL Nº:</strong> {data.embarque.numero_bl}
+              <Divider flexItem />
+              <strong>BL:</strong> {data.embarque.bl_status ? 'OK' : ''}
+              <Divider flexItem />
+              <strong>FATURA:</strong> {data.embarque.fatura}
+              <Divider flexItem />
+              <strong>CHEGADA PORTO:</strong> {converteData(data.embarque.chegada_porto)}
+              <Divider flexItem />
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card sx={{ flex: 1, backgroundColor: '#bae7ff', textAlign: 'center' }}>
+          <CardContent>
+            <Typography sx={{ color: '#434343' }} variant="h2" gutterBottom>
+              <strong>Embarque</strong>
+            </Typography>
+            <Stack direction="column" spacing={4}>
+              <Stepper alternativeLabel activeStep={activeStepEmbarque} connector={<ColorlibConnector />}>
+                {stepsEmbarque.map((label, index) => (
+                  <Step key={label}>
+                    <StepLabel StepIconComponent={ColorlibStepIcon} icon={index + 1}>
+                      {label}
+                    </StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNextEmbarque}
+                sx={{ display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#bae7ff' }}
+              >
+                {activeStepEmbarque === stepsEmbarque.length - 1 ? 'Resetar' : 'Próxima etapa'}
+              </Button>
+            </Stack>
+          </CardContent>
+        </Card>
+      </div>
+      <div style={{ display: 'flex', gap: '20px' }}>
+        <Card sx={{ flex: 1, backgroundColor: '#bae7ff', textAlign: 'center' }}>
+          <CardContent>
+            <Typography sx={{ color: '#434343' }} variant="h2" gutterBottom>
               <strong>Chegada</strong>
             </Typography>
             <Stack sx={{ width: '100%' }} spacing={4}>
@@ -203,7 +215,12 @@ export default function CustomizedSteppers() {
                   </Step>
                 ))}
               </Stepper>
-              <Button variant="contained" color="primary" onClick={handleNextChegada}>
+              <Button
+                variant="contained"
+                color="primary"
+                sx={{ display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#bae7ff' }}
+                onClick={handleNextChegada}
+              >
                 {activeStepChegada === stepsChegada.length - 1 ? 'Reset' : 'Next'}
               </Button>
             </Stack>
@@ -211,36 +228,36 @@ export default function CustomizedSteppers() {
         </Card>
         <Card sx={{ display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#bae7ff' }}>
           <CardContent>
-            <Typography variant="h2" gutterBottom>
+            <Typography sx={{ color: '#434343' }} variant="h2" gutterBottom>
               <strong>Chegada</strong>
             </Typography>
             <Typography variant="body1">
               <strong>DOCS:</strong> {data.chegada.documentacao ? 'OK' : ''}
-              <br />
+              <Divider flexItem />
               <strong>DATA DI:</strong> {data.chegada.data_di}
-              <br />
+              <Divider flexItem />
               <strong>DI Nº:</strong> {data.chegada.numero_di}
-              <br />
+              <Divider flexItem />
               <strong>CE PROCESSO:</strong> {data.chegada.ce_processo}
-              <br />
+              <Divider flexItem />
               <strong>STATUS:</strong> {data.chegada.status}
-              <br />
+              <Divider flexItem />
               <strong>GLME:</strong> {data.chegada.glme ? 'OK' : ''}
-              <br />
+              <Divider flexItem />
               <strong>NF_Status:</strong> {data.chegada.nf_status ? 'OK' : ''}
-              <br />
+              <Divider flexItem />
               <strong>CIPP AVERB.:</strong> {data.chegada.cipp_averb ? 'OK' : ''}
-              <br />
+              <Divider flexItem />
               <strong>CHEGADA NA EMPRESA:</strong> {converteData(data.chegada.chegada_empresa)}
-              <br />
+              <Divider flexItem />
               <strong>FREE TIME:</strong> {data.chegada.free_time}
-              <br />
+              <Divider flexItem />
               <strong>FREE TIME END:</strong> {verificaFreeTime(data)}
-              <br />
+              <Divider flexItem />
               <strong>TRANSP.:</strong> {data.chegada.transportadora}
-              <br />
+              <Divider flexItem />
               <strong>NF / CTE:</strong> {data.chegada.nf} / {data.chegada.cte}
-              <br />
+              <Divider flexItem />
             </Typography>
           </CardContent>
         </Card>
